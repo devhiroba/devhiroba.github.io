@@ -2,7 +2,7 @@
 sort: 3
 ---
 
-# Java Documentation
+# JAVA
 
 ```
 {% raw %}{% include list.liquid all=true %}{% endraw %}
