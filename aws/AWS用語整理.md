@@ -21,7 +21,7 @@ Amazonにより提供されているクラウドコンピューティングサ�
 > 同じリージョン内の各AZは専用線(Direct connect)で繋がっているためタイムラグはほぼない  
 
 ### Edge Location
--
+> AWSのCDNサービスであるCloud Frontのキャッシュサーバがある場所を意味する
 
 ## Computing
 ### EC2
