@@ -13,7 +13,9 @@ Amazon Web Servicesの種類と機能を説明します。
 
 ## Database
 ### DynamoDB
+NoSQL
 ### ElastiCache
+key,valueデータストア
 
 ## Container
 ### ECS
