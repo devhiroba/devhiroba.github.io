@@ -31,7 +31,10 @@ Amazonにより提供されているクラウドコンピューティングサ�
 > インスタンス単位でサーバーを構築して利用できる  
 
 ### ECS
-EC2 Container Service
+> EC2 Container Service  
+> コンテナオーケストレーションサービス  
+> EC2とFargate上で運用するDockerコンテナをコントロールできる  
+
 ### EKS
 -
 ### EB
