@@ -3,15 +3,15 @@ Amazonにより提供されているクラウドコンピューティングサ�
 
 ## Network（ネットワーク）
 
-#### Region（リージョン）
+### Region（リージョン）
 
-#### Availability Zone - AZ（アベイラビリティーゾーン）
+### Availability Zone - AZ（アベイラビリティーゾーン）
 
-#### Edge Location（エッジロケーション）
+### Edge Location（エッジロケーション）
 
-#### VPC
+### VPC
 
-#### Security Group - SG（セキュリティグループ）
+### Security Group - SG（セキュリティグループ）
 
 
 ## Server
