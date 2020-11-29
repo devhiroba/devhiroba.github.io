@@ -7,13 +7,16 @@ Amazon Web Servicesの種類と機能を説明します。
 
 ## storage
 ### ECR
-コンテナ
+コンテナストレージ
+### S3
+ファイルストレージ
 
 ## Database
 ### DynamoDB
+### ElastiCache
 
-
-## ElastiCache
-## S3
+## Container
 ## ECS
+コンテナオーケストレーション
 ## EKS
+kubernetesを利用したコンテナオーケストレーション
