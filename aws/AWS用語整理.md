@@ -26,9 +26,9 @@ Amazonにより提供されているクラウドコンピューティングサ�
 
 ## Computing
 ### EC2
-Elastic Compute Cloud  
-AWS上のクラウド環境で利用できる仮想サーバーのこと  
-インスタンス単位でサーバーを構築して利用できる  
+> Elastic Compute Cloud  
+> AWS上のクラウド環境で利用できる仮想サーバーのこと  
+> インスタンス単位でサーバーを構築して利用できる  
 
 ### ECS
 EC2 Container Service
