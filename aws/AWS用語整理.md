@@ -11,55 +11,52 @@ Amazonにより提供されているクラウドコンピューティングサ�
 
 ## Computing
 ### EC2
-(Elastic Compute Cloud)
+Elastic Compute Cloud
 サーバーインスタンス
 ### ECS
-(EC2 Container Service)
+EC2 Container Service
 ### EKS
 -
 ### EB
-(Elastic Beanstalk)
+Elastic Beanstalk
 ### Lambda
 -
 ### Auto Scaling
 -
 ### AMI
-(Amazon Machine Images)
--
+Amazon Machine Images
 
 ## Storage
 ### S3
-(Simple Storage Service)
+Simple Storage Service
 コンテナストレージ
 ### Glacier
 ファイルストレージ
 ### EBS
-(Elastic Block Store)
+Elastic Block Store
 
 ## Database
 ### DynamoDB
 NoSQL
 ### RDS
-(Relational Database Service)
--
+Relational Database Service
 ### ElastiCache
 key,valueデータストア
 
 ## Networking
 ### CloudFront
--
+a
 ### Route 53
--
+a
 ### GatewayAPI
--
+a
 ### VPC
-(Virtual Private Cloud)
--
+Virtual Private Cloud
 ### Security Group - SG
--
+a
 
 ## Management Tools
 ### CloudWatch
--
+a
 ### CloudFormation
--
+a
