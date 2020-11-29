@@ -1,0 +1,3 @@
+# ArchUnit
+
+source: `{{ page.path }}`
