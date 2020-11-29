@@ -16,7 +16,7 @@ Amazon Web Servicesの種類と機能を説明します。
 ### ElastiCache
 
 ## Container
-## ECS
+### ECS
 コンテナオーケストレーション
-## EKS
+### EKS
 kubernetesを利用したコンテナオーケストレーション
