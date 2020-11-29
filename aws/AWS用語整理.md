@@ -1,37 +1,65 @@
-# AWS（Amazon Web Services）とは
+# AWS(Amazon Web Services)とは
 Amazonにより提供されているクラウドコンピューティングサービスのこと
 
-## Network（ネットワーク）
+## AWSサービス領域に関する用語
+### Region
+-
+### Availability Zone - AZ
+-
+### Edge Location
+-
 
-### Region（リージョン）
-
-### Availability Zone - AZ（アベイラビリティーゾーン）
-
-### Edge Location（エッジロケーション）
-
-### VPC
-
-### Security Group - SG（セキュリティグループ）
-
-
-## Server
+## Computing
 ### EC2
+(Elastic Compute Cloud)
 サーバーインスタンス
+### ECS
+(EC2 Container Service)
+### EKS
+-
+### EB
+(Elastic Beanstalk)
+### Lambda
+-
+### Auto Scaling
+-
+### AMI
+(Amazon Machine Images)
+-
 
-## storage
-### ECR
-コンテナストレージ
+## Storage
 ### S3
+(Simple Storage Service)
+コンテナストレージ
+### Glacier
 ファイルストレージ
+### EBS
+(Elastic Block Store)
 
 ## Database
 ### DynamoDB
 NoSQL
+### RDS
+(Relational Database Service)
+-
 ### ElastiCache
 key,valueデータストア
 
-## Container
-### ECS
-コンテナオーケストレーション
-### EKS
-kubernetesを利用したコンテナオーケストレーション
+## Networking
+### CloudFront
+-
+### Route 53
+-
+### GatewayAPI
+-
+### VPC
+(Virtual Private Cloud)
+-
+### Security Group - SG
+-
+
+## Management Tools
+### CloudWatch
+-
+### CloudFormation
+-
