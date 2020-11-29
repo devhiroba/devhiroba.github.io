@@ -1,11 +1,17 @@
 # AWSについて
 Amazon Web Servicesの種類と機能を説明します。
 
-## EC2
+## Server
+### EC2
 サーバーインスタンス
 
-## ECR
+## storage
+### ECR
 コンテナ
+
+## Database
+### DynamoDB
+
 
 ## ElastiCache
 ## S3
