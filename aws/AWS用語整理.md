@@ -81,3 +81,5 @@ a
 a
 ### CloudFormation
 a
+### AWS Config
+毎日JSON形式でサーバーの設定情報をS3に保存する。
