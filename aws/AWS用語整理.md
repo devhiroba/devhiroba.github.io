@@ -90,4 +90,5 @@ a
 AWS Key Management Service
 
 ### Amazon Pinpoint
-AWSによるカスタマーエンゲージメントプラットフォーム
+AWSによるカスタマーエンゲージメントプラットフォーム  
+Amplify Framework(SDK)を利用してデータの取得が可能?
