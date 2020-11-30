@@ -83,3 +83,8 @@ a
 a
 ### AWS Config
 毎日JSON形式でサーバーの設定情報をS3に保存する。
+
+### GuardDuty
+
+### AWS KMS
+AWS Key Management Service
