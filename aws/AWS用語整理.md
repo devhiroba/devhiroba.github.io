@@ -91,4 +91,6 @@ AWS Key Management Service
 
 ### Amazon Pinpoint
 AWSによるカスタマーエンゲージメントプラットフォーム  
+メール配信システムとしても利用可能  
 Amplify Framework(SDK)を利用してデータの取得が可能?
+
