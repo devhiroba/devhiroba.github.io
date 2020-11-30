@@ -88,3 +88,6 @@ a
 
 ### AWS KMS
 AWS Key Management Service
+
+### Amazon Pinpoint
+AWSによるカスタマーエンゲージメントプラットフォーム
