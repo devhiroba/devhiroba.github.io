@@ -8,12 +8,12 @@ AWS で提供するフルマネージド型の NoSQL データベースサービ
 ## DynamoDBをJavaのユニットテストで利用する方法  
 下記の開発環境でDynamoDBを利用する方法を説明する  
 
-Java  
-Gradle  
-IntelliJ  
-Junit5  
-DynamoDBMapper  
-Docker-compose
+- Java  
+- Gradle  
+- IntelliJ  
+- Junit5  
+- DynamoDBMapper  
+- Docker-compose
 
  
 
