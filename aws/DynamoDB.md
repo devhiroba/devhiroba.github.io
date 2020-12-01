@@ -18,18 +18,6 @@ AWS で提供するフルマネージド型の NoSQL データベースサービ
 ### build.gradle
 Junit5 と DynamoDBMapper を使用する為、下記を build.gradle の dependencies に設定する
 
-```
-dependencies {
-    testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
-    testImplementation("com.amazonaws:aws-java-sdk-dynamodb:1.11.563")
-}
-
-// use JUnit 5 platform
-test {
-    useJUnitPlatform()
-}
-```
-
 ```scss
 dependencies {
     testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
