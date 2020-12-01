@@ -49,7 +49,7 @@ services:
     restart: always
 ```
 
-### パッケージ構成
+### プロジェクトの構成
 ![Test Image 3](/resource/image/dynamodb-local-dynamodbmapper-sample-image.png)
 
 ### UserModel
@@ -229,6 +229,7 @@ public class DynamoDBMapperTest {
 
         // アイテム削除
         dynamoDBMapper.delete(userModel);
+        // 結果確認
         assertNull(dynamoDBMapper.load(UserModel.class, userModel.getId(), userModel.getGender()));
     }
 }
