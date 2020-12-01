@@ -1,7 +1,7 @@
 # AWS用語
 
 ## AWS とは
-Amazon Web Services
+Amazon Web Services  
 Amazonにより提供されているクラウドコンピューティングサービスのこと
 
 ## AWS サービス領域に関する用語
