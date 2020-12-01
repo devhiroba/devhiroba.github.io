@@ -5,8 +5,9 @@ AWS で提供するフルマネージド型の NoSQL データベースサービ
 データベースの管理を AWS 側でしてくれるので便利  
 高速なのでセッションサーバーとしても問題ない、モバイルゲームアプリでも DynamoDB を利用しているようだ  
 
-## DynamoDB を Java のユニットテストで使用する方法  
-下記の開発環境で DynamoDB を利用する方法を説明する  
+## DynamoDB ローカルを Java のユニットテストで使用する方法  
+下記の開発環境で DynamoDB を利用する方法を説明する 
+DynamoDB ローカルとは？AWS DynamoDB がローカルの開発環境で使用できる Docker コンテナのこと
 
 - Java  
 - Gradle  
@@ -28,7 +29,11 @@ test {
     useJUnitPlatform()
 }
 ```
-
+### docker-compose.yml
+DynamoDBローカルの Docker コンテナを使用する為、docker-compose.yml を定義する
+```scss
+test
+```
 
 ## Dockerコンテナ起動と同時にテーブルを作成するdocker-compose.yml
 
