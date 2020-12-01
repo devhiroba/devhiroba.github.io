@@ -13,6 +13,9 @@ Gradle
 IntelliJ  
 Junit5  
 DynamoDBMapper  
+Docker-compose
+
+ 
 
 
 
