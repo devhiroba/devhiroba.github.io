@@ -18,7 +18,7 @@ DynamoDB ローカルとは？AWS DynamoDB がローカルの開発環境で使�
 
 ### build.gradle
 JUnit5 と DynamoDBMapper を使用する為、build.gradle の 設定をする
-```scss
+```
 dependencies {
     // JUnit
     testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
@@ -38,7 +38,7 @@ test {
 ```
 ### docker-compose.yml
 DynamoDBローカルの Docker コンテナを使用する為、docker-compose.yml を定義する
-```scss
+```
 version: '2.0'
 services:
   dynamodb:
@@ -53,7 +53,7 @@ services:
 ![Test Image 3](/resource/image/dynamodb-local-dynamodbmapper-sample-image.png)
 
 ### UserModel
-```scss
+```
 package models;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
@@ -85,7 +85,7 @@ public class UserModel {
 ```
 
 ### DynamoDBMapperTest
-```scss
+```
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
