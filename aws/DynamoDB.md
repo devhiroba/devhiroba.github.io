@@ -32,7 +32,15 @@ test {
 ### docker-compose.yml
 DynamoDBローカルの Docker コンテナを使用する為、docker-compose.yml を定義する
 ```scss
-test
+version: '1.0'
+services:
+  dynamodb:
+    container_name: dynamodb
+    image: amazon/dynamodb-local:latest
+    ports:
+      - 8000:8000
+    restart: always
+    command: [ "-jar", "DynamoDBLocal.jar", "-sharedDb", "-inMemory" ]
 ```
 
 ## Dockerコンテナ起動と同時にテーブルを作成するdocker-compose.yml
