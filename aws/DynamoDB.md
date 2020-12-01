@@ -12,16 +12,18 @@ DynamoDB ローカルとは？AWS DynamoDB がローカルの開発環境で使�
 - Java  
 - Gradle  
 - IntelliJ  
-- Junit5  
+- JUnit5  
 - DynamoDBMapper  
 - Docker-compose
 
 ### build.gradle
-Junit5 と DynamoDBMapper を使用する為、build.gradle の 設定をする
+JUnit5 と DynamoDBMapper を使用する為、build.gradle の 設定をする
 ```scss
 dependencies {
+    // JUnit
     testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
-    testImplementation("com.amazonaws:aws-java-sdk-dynamodb:1.11.563")
+    // dynamodb
+    Implementation("com.amazonaws:aws-java-sdk-dynamodb:1.11.563")
 }
 
 // use JUnit 5 platform
