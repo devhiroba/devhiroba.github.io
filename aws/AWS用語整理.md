@@ -1,4 +1,4 @@
-# AWSとは
+# AWS用語
 Amazon Web Services
 Amazonにより提供されているクラウドコンピューティングサービスのこと
 
