@@ -235,5 +235,4 @@ public class DynamoDBMapperTest {
 ```
 
 ### GitHub Repository
-
-[https://github.com/benbalter/jekyll-avatar](https://github.com/devhiroba/dynamodb-local-dynamodbmapper-sample.git)
+[https://github.com/devhiroba/dynamodb-local-dynamodbmapper-sample.git](https://github.com/devhiroba/dynamodb-local-dynamodbmapper-sample.git)
