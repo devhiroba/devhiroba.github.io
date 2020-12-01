@@ -16,7 +16,7 @@ AWS で提供するフルマネージド型の NoSQL データベースサービ
 - Docker-compose
 
 ### build.gradle
-Junit5 と DynamoDBMapper を使用する為、下記を build.gradle の dependencies に設定する
+Junit5 と DynamoDBMapper を使用する為、build.gradle の 設定をする
 ```scss
 dependencies {
     testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
