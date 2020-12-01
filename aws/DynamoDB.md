@@ -22,8 +22,13 @@ JUnit5 と DynamoDBMapper を使用する為、build.gradle の 設定をする
 dependencies {
     // JUnit
     testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+
     // dynamodb
-    Implementation("com.amazonaws:aws-java-sdk-dynamodb:1.11.563")
+    implementation("com.amazonaws:aws-java-sdk-dynamodb:1.11.563")
+
+    // lombok
+    implementation("org.projectlombok:lombok:1.18.12")
+    annotationProcessor("org.projectlombok:lombok:1.18.12")
 }
 
 // use JUnit 5 platform
@@ -34,7 +39,7 @@ test {
 ### docker-compose.yml
 DynamoDBローカルの Docker コンテナを使用する為、docker-compose.yml を定義する
 ```scss
-version: '1.0'
+version: '2.0'
 services:
   dynamodb:
     container_name: dynamodb
@@ -42,8 +47,11 @@ services:
     ports:
       - 8000:8000
     restart: always
-    command: [ "-jar", "DynamoDBLocal.jar", "-sharedDb", "-inMemory" ]
 ```
+
+### 
+
+
 
 ## Dockerコンテナ起動と同時にテーブルを作成するdocker-compose.yml
 
