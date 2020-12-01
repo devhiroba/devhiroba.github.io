@@ -49,7 +49,37 @@ services:
     restart: always
 ```
 
-### テスト用クラス
-https://github.com/devhiroba/devhiroba.github.io/blob/master/resource/image/dynamodb-local-dynamodbmapper-sample-image.png
+### パッケージ構成
+![Test Image 3](/resource/image/dynamodb-local-dynamodbmapper-sample-image.png)
 
+### UserModel
+```scss
+package models;
 
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBRangeKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
+import lombok.Data;
+
+@Data
+@DynamoDBTable(tableName = "UserModel")
+public class UserModel {
+    /**
+     * Partition key
+     */
+    @DynamoDBHashKey(attributeName = "id")
+    private String id;
+    /**
+     * Range key
+     */
+    @DynamoDBRangeKey(attributeName = "gender")
+    private String gender;
+
+    @DynamoDBAttribute(attributeName = "name")
+    private String name;
+
+    @DynamoDBAttribute(attributeName = "age")
+    private Integer age;
+}
+```
