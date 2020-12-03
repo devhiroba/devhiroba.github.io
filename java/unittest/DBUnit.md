@@ -16,10 +16,36 @@
 - Docker-compose
 
 ### build.gradle
-JUnit5 と DynamoDBMapper を使用する為、build.gradle の 設定をする
+JUnit5 と DBUnit を使用する為、build.gradle の 設定をする
+```
+dependencies {
+    // JUnit
+    testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+
+    // DBUnit
+    testImplementation('org.dbunit:dbunit:2.7.0')
+
+    // Oracle JDBC
+    runtimeOnly("com.oracle.database.jdbc:ojdbc8:19.7.0.0")
+}
+
+// use JUnit 5 platform
+test {
+    useJUnitPlatform()
+}
+```
 
 ### docker-compose.yml
-DynamoDBローカルの Docker コンテナを使用する為、docker-compose.yml を定義する
+Oracle Database の Docker コンテナを使用する為、docker-compose.yml を定義する
+```
+version: '2.0'
+services:
+    oracle:
+      container_name: oracle11g
+      image: "jaspeen/oracle-xe-11g"
+      ports:
+        - "1521:1521"
+```
 
 ### プロジェクトの構成
-![Test Image 3](/resource/image/dynamodb-local-dynamodbmapper-sample-image.png)
+![Test Image 3](/resource/image/dbunit-sample-image.png)
