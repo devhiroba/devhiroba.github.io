@@ -50,7 +50,7 @@ services:
 ### プロジェクトの構成
 ![Test Image 3](/resource/image/dbunit-sample-image.png)
 
-### DynamoDBMapperTest
+### DBUnitTest
 ```
 import org.dbunit.IDatabaseTester;
 import org.dbunit.JdbcDatabaseTester;
