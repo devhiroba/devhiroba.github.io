@@ -99,4 +99,4 @@ public class DBUnitTest {
 ```
 
 ### GitHub Repository
-[https://github.com/devhiroba/dynamodb-local-dynamodbmapper-sample.git](https://github.com/devhiroba/dynamodb-local-dynamodbmapper-sample.git)
+[https://github.com/devhiroba/dbunit-sample.git](https://github.com/devhiroba/dbunit-sample.git)
