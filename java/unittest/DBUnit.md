@@ -98,5 +98,14 @@ public class DBUnitTest {
 }
 ```
 
+### seed-data-each.xml
+```
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataset>
+    <job_history employee_id="102" start_date="2020-10-10 00:00:03" end_date="2020-11-10 00:00:04" job_id="IT_PROG" department_id="60" />
+    <job_history employee_id="101" start_date="2020-11-01 00:00:03" end_date="2020-12-01 00:00:04" job_id="AC_ACCOUNT" department_id="110" />
+</dataset>
+```
+
 ### GitHub Repository
 [https://github.com/devhiroba/dbunit-sample.git](https://github.com/devhiroba/dbunit-sample.git)
