@@ -3,6 +3,8 @@
 [https://oohira.github.io/junit5-doc-jp/user-guide/](https://oohira.github.io/junit5-doc-jp/user-guide/)
 
 ## JUnit とは
+Javaで書かれたプログラムのテストを自動化してくれるツールです。  
+テストケースを作って置けばビルドするたびにテストしてくれます。
 
 ## 単体テストで DBUnit を使用する方法
 
