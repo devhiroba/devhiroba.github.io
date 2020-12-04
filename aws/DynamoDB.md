@@ -1,13 +1,14 @@
 # DynamoDB
+[https://aws.amazon.com/jp/dynamodb/](https://aws.amazon.com/jp/dynamodb/)
 
 ## DynamoDB とは
-AWS で提供するフルマネージド型の NoSQL データベースサービスである  
+AWS で提供するフルマネージド型の NoSQL データベースサービスです。
 データベースの管理を AWS 側でしてくれるので便利  
-高速なのでセッションサーバーとしても問題ない、モバイルゲームアプリでも DynamoDB を利用しているようだ  
+高速なのでセッションサーバーとしても問題ない、モバイルゲームアプリでも DynamoDB を利用しているようです。  
 
 ## DynamoDB ローカルを Java のユニットテストで使用する方法  
-DynamoDB ローカルとは？AWS DynamoDB がローカルの開発環境で使用できる Docker コンテナのこと  
-下記の開発環境で DynamoDB を利用する方法を説明する  
+DynamoDB ローカルとは？AWS DynamoDB がローカルの開発環境で使用できる Docker コンテナのことです。  
+開発環境 
 
 - Java  
 - Gradle  
@@ -17,7 +18,7 @@ DynamoDB ローカルとは？AWS DynamoDB がローカルの開発環境で使�
 - Docker-compose
 
 ### build.gradle
-JUnit5 と DynamoDBMapper を使用する為、build.gradle の 設定をする
+JUnit5 と DynamoDBMapper を使用する為、build.gradle の 設定をします
 ```
 dependencies {
     // JUnit
@@ -37,7 +38,7 @@ test {
 }
 ```
 ### docker-compose.yml
-DynamoDBローカルの Docker コンテナを使用する為、docker-compose.yml を定義する
+DynamoDBローカルの Docker コンテナを使用する為、docker-compose.yml を定義します
 ```
 version: '2.0'
 services:
