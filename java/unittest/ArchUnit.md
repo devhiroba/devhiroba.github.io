@@ -29,6 +29,9 @@ JUnit5 と ArchUnit を使用する為、build.gradle の 設定をする
 ### プロジェクトの構成
 ![Test Image 3](/resource/image/archunit-sample-image.png)
 
+### パッケージの構成
+![Test Image 3](/resource/image/archunit--image.png)
+
 ### UserModel
 ```
 
