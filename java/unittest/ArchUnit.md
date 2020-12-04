@@ -7,4 +7,31 @@
 - クラスのパッケージングのチェック
 - 循環参照のチェック
 
-source: `{{ page.path }}`
+## 単体テストで ArchUnit を使用する方法
+開発環境
+- Java
+- Gradle
+- IntelliJ
+- JUnit5
+- ArchUnit
+
+### build.gradle
+JUnit5 と ArchUnit を使用する為、build.gradle の 設定をする
+```
+```
+
+### プロジェクトの構成
+![Test Image 3](/resource/image/archunit-sample-image.png)
+
+### UserModel
+```
+
+```
+
+### UserModel
+```
+
+```
+
+### GitHub Repository
+[https://github.com/devhiroba/archunit-sample.git](https://github.com/devhiroba/archunit-sample.git)
