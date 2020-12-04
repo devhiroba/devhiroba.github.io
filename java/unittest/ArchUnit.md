@@ -13,8 +13,13 @@
 - Java
 - Gradle
 - IntelliJ
-- JUnit5
 - ArchUnit
+- JUnit5
+
+JUnit5 からは ArchUnit でアノテーションが利用できるようになり、コードかもっと綺麗に書けるようになりました！
+
+- @AnalyzeClasses：クラスを読み込んでチェックするパッケージを設定
+- @ArchTest：チェックするルールを定義
 
 ### build.gradle
 JUnit5 と ArchUnit を使用する為、build.gradle の 設定をする
