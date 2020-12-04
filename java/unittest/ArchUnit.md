@@ -115,7 +115,7 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 public class ArchUnitClassTest {
     /**
      * クラス名が Controller で終わるクラスは Service, model で終わるクラスを参照可能
-     * 必ず参照しなければならない（各 Controller クラスで Service 又は model クラスを参照しないとエラーになる）
+     * 必ず参照しなければならない（各 Controller クラスで Service 又は domain クラスを参照しないとエラーになる）
      */
     @ArchTest
     ArchRule controllerClassRule = classes().that().haveSimpleNameEndingWith("Controller")
