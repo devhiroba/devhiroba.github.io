@@ -24,6 +24,15 @@ JUnit5 からは ArchUnit でアノテーションが利用できるようにな
 ### build.gradle
 JUnit5 と ArchUnit を使用する為、build.gradle の 設定をする
 ```
+dependencies {
+    // ArchUnit
+    testImplementation('com.tngtech.archunit:archunit-junit5-engine:0.14.1')
+}
+
+// use JUnit 5 platform
+test {
+    useJUnitPlatform()
+}
 ```
 
 ### プロジェクトの構成
