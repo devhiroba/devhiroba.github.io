@@ -1,12 +1,14 @@
 # DBUnit
+[http://dbunit.sourceforge.net/](http://dbunit.sourceforge.net/)
 
 ## DBUnit とは
 単体テスト利用するデータベースアクセスツール  
-データベースへの CRUD 処理のテストを行うためには初期データの登録が必要だが、  
-その時に使用できるのが DBUnit だ！
+データベースへの CRUD 処理のテストを行うためには初期データの登録が必要ですが、  
+その時に使用できるのが DBUnit です！
+DBUnit ライブラリ使用すればわざわざテストの為にデータベースとやり取りするロジックを作る手間が省けるようになります
 
 ## 単体テストで DBUnit を使用する方法
-下記の開発環境で DBUnit を利用する方法を説明する  
+開発環境  
 
 - Java  
 - Gradle  
@@ -16,7 +18,7 @@
 - Docker-compose
 
 ### build.gradle
-JUnit5 と DBUnit を使用する為、build.gradle の 設定をする
+JUnit5 と DBUnit を使用する為、build.gradle の 設定をします
 ```
 dependencies {
     // JUnit
@@ -36,7 +38,7 @@ test {
 ```
 
 ### docker-compose.yml
-Oracle Database の Docker コンテナを使用する為、docker-compose.yml を定義する
+Oracle Database の Docker コンテナを使用する為、docker-compose.yml を定義します
 ```
 version: '2.0'
 services:
