@@ -38,6 +38,8 @@ test {
 ![Test Image 3](/resource/image/archunit-sample-image.png)
 
 ### プロジェクトのアーキテクチャ
+下記図のアーキテクチャをチェックするいくつかのテストパターンを作成します。
+テストパターンについてはソースにコメントを付けました。
 ![Test Image 3](/resource/image/archunit-diagram-image.png)
 
 ### ArchUnitPackageTest
