@@ -37,7 +37,7 @@ test {
 ### プロジェクトの構成
 ![Test Image 3](/resource/image/archunit-sample-image.png)
 
-### パッケージの構成
+### プロジェクトのアーキテクチャ
 ![Test Image 3](/resource/image/archunit-diagram-image.png)
 
 ### ArchUnitPackageTest
