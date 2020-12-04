@@ -134,8 +134,8 @@ public class ArchUnitClassTest {
      * クラス名が Controller で終わるクラスは controller パッケージに作成する
      */
     @ArchTest
-    ArchRule studyClassesRule = classes().that().haveSimpleNameStartingWith("Controller")
-            .should().resideInAnyPackage("..controller..");
+    ArchRule controllerClassesRule = classes().that().haveSimpleNameStartingWith("Service")
+            .should().resideInAnyPackage("..service..");
 }
 ```
 
