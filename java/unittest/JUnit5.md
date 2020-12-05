@@ -6,6 +6,13 @@
 Javaで書かれたプログラムのテストを自動化してくれるテスティングフレームワークです。  
 テストケースを作って置けばビルドするたびにテストしてくれます。
 
+## JUnit5 の構成
+![JUnit5-diagram-image](/resource/image/junit5-diagram-image.png)
+- JUnit 5 = JUnit Platform + JUnit Jupiter + JUnit Vintage
+- JUnit Platform：テストを実行させるランチャーを提供、TestEngine API を提供
+- Jupiter：JUnit Platform の TestEngine API を実装して JUnit5 用 TestEngine API を提供
+- Vintage：JUnit Platform の TestEngine API を実装して JUnit3 と Junit4 用 TestEngine API を提供
+
 ## 単体テストで DBUnit を使用する方法
 
 ### build.gradle
