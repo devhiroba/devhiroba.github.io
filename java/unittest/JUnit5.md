@@ -20,7 +20,7 @@ JAVA の main クラスでもないのに下記のようなメソッドの実行
 ## 単体テストで JUnit5 を使用する方法
 
 ### build.gradle
-JUnit5 を使用する為、build.gradle の 設定をします
+JUnit5 を使用する為、build.gradle の設定をします
 ```
 dependencies {
     // JUnit
