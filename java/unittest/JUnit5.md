@@ -13,7 +13,8 @@ Javaで書かれたプログラムのテストを自動化してくれるテス�
 - Jupiter：JUnit Platform の TestEngine API を実装して JUnit5 用 TestEngine API を提供
 - Vintage：JUnit Platform の TestEngine API を実装して JUnit3 と JUnit4 用 TestEngine API を提供
 
-JAVA の main クラスでもないのに下記のようなメソッドの実行ができるのは JUnit Platform があるからです。  
+JAVA の main クラスでもないのに下記のようなメソッドの実行ができるのは JUnit Platform のお陰です。  
+
 ![JUnit5-testclass-image](/resource/image/junit5-testclass-image.png)
 
 ## 単体テストで JUnit5 を使用する方法
