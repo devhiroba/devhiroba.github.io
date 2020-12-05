@@ -112,7 +112,6 @@ public class JUnit5Test {
         System.out.println("afterEach");
     }
 }
-
 ```
 
 ### Junit5TestDisplayName
@@ -152,7 +151,6 @@ public class JUnit5TestDisplayName {
         System.out.println("test_no3");
     }
 }
-
 ```
 
 ### Junit5TestAssertion
@@ -236,7 +234,6 @@ public class JUnit5TestAssertion {
         );
     }
 }
-
 ```
 
 ### Junit5TestAssume
@@ -318,7 +315,6 @@ public class JUnit5TestAssume {
         System.out.println("test6!");
     }
 }
-
 ```
 
 ### Junit5Tag
