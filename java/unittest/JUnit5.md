@@ -153,7 +153,7 @@ public class JUnit5TestDisplayName {
     }
 }
 ```
-#### @DisplayName を付けても名前が変更されない。。。
+#### [@DisplayName] を付けても名前が変更されない。。。
 これは IntelliJ がテスト時に Gradle(Default) を利用するようになっているためです。IntelliJ IDEA を使用するように変更しましょう！  
 File > Settings > Build, Excution, Deployment > Gradle > Gradle projects > Run tests using  
 Run tests using を Gradle(Default) から IntelliJ IEDA に変更！
@@ -627,7 +627,7 @@ junit.jupiter.displayname.generator.default = \
   org.junit.jupiter.api.DisplayNameGenerator$ReplaceUnderscores
 ```
 
-### @ExtendWith, @RegisterExtenstion
+### [@ExtendWith], [@RegisterExtenstion]
 いろいろ工夫すれば、テスト時間を計測して処理時間の遅いテストにはメッセージを出したりすることもできるみたい！
 ```
 ToDo. 使用方法について調査
