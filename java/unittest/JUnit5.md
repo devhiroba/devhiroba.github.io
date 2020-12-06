@@ -154,8 +154,8 @@ public class JUnit5TestDisplayName {
 }
 ```
 #### @DisplayName を付けても名前が変更されない。。。
-これは IntelliJ がテスト時に Gradle(Default) を利用するようになっているためです。IntelliJ IDEA を使用するように変更しましょう！
-File > Settings > Build, Excution, Deployment > Gradle > Gradle projects > Run tests using
+これは IntelliJ がテスト時に Gradle(Default) を利用するようになっているためです。IntelliJ IDEA を使用するように変更しましょう！  
+File > Settings > Build, Excution, Deployment > Gradle > Gradle projects > Run tests using  
 Run tests using を Gradle(Default) から IntelliJ IEDA に変更！
 
 ### Junit5TestAssertion
@@ -421,7 +421,7 @@ public @interface CustomAnnotationFastTest {
 }
 ```
 
-#### CustomAnnotationSlowTest
+#### CustomAnnotationSlowTest.java
 ```
 package devhiroba.junit5.test;
 
@@ -458,7 +458,7 @@ import org.junit.jupiter.params.provider.*;
 public class JUnit5TestRepeat {
 
     /**
-     * テストを10回実施する
+     * テストを3回実施する
      */
     @RepeatedTest(3)
     void test1() {
