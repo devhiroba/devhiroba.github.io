@@ -158,7 +158,7 @@ public class JUnit5TestDisplayName {
 File > Settings > Build, Excution, Deployment > Gradle > Gradle projects > Run tests using  
 Run tests using を Gradle(Default) から IntelliJ IEDA に変更！
 
-### Junit5TestAssertion
+### Junit5TestAssertion.java
 Assertを使用してテストする
 ```
 package devhiroba.junit5.test;
@@ -241,7 +241,7 @@ public class JUnit5TestAssertion {
 }
 ```
 
-### Junit5TestAssume
+### Junit5TestAssume.java
 条件によってテストの実行可否を制御
 ```
 package devhiroba.junit5.test;
@@ -322,7 +322,7 @@ public class JUnit5TestAssume {
 }
 ```
 
-### Junit5Tag
+### Junit5Tag.java
 テストケースを分離する
 ```
 package devhiroba.junit5.test;
@@ -364,7 +364,7 @@ public class JUnit5TestTag {
 }
 ```
 
-### Junit5TestAssertion
+### Junit5TestAssertion.java
 カスタムアノテーションを作成する
 ```
 package devhiroba.junit5.test;
