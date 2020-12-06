@@ -34,7 +34,7 @@ test {
 ```
 
 ### プロジェクトの構成
-![Test Image 3](/resource/image/dbunit-sample-image.png)
+![Test Image 3](/resource/image/junit5-sample-image.png)
 
 ### JUnit5Test.java
 Junit5のライフサイクル
@@ -625,6 +625,12 @@ junit.jupiter.conditions.deactivate = org.junit.*DisabledCondition
 # テストメソッドの表示名を変更する(@DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)と同じ)
 junit.jupiter.displayname.generator.default = \
   org.junit.jupiter.api.DisplayNameGenerator$ReplaceUnderscores
+```
+
+### @ExtendWith, @RegisterExtenstion
+いろいろ工夫すれば、テスト時間を計測して処理時間の遅いテストにはメッセージを出したりすることもできるみたい！
+```
+ToDo. 使用方法について調査
 ```
 
 ### GitHub Repository
