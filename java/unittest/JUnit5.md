@@ -37,7 +37,7 @@ test {
 ![Test Image 3](/resource/image/junit5-sample-image.png)
 
 ### JUnit5Test.java
-Junit5のライフサイクル
+- Junit5のライフサイクル
 ```
 package devhiroba.junit5.test;
 
@@ -116,7 +116,7 @@ public class JUnit5Test {
 ```
 
 ### Junit5TestDisplayName.java
-テストメソッドの名前を変更
+- テストメソッドの名前を変更
 ```
 package devhiroba.junit5.test;
 
@@ -159,7 +159,7 @@ File > Settings > Build, Excution, Deployment > Gradle > Gradle projects > Run t
 Run tests using を Gradle(Default) から IntelliJ IEDA に変更！
 
 ### Junit5TestAssertion.java
-Assertを使用してテストする
+- Assertを使用してテストする
 ```
 package devhiroba.junit5.test;
 
@@ -242,7 +242,7 @@ public class JUnit5TestAssertion {
 ```
 
 ### Junit5TestAssume.java
-条件によってテストの実行可否を制御
+- 条件によってテストの実行可否を制御
 ```
 package devhiroba.junit5.test;
 
@@ -323,7 +323,7 @@ public class JUnit5TestAssume {
 ```
 
 ### Junit5Tag.java
-テストケースを分離する
+- テストケースを分離する
 ```
 package devhiroba.junit5.test;
 
@@ -365,7 +365,7 @@ public class JUnit5TestTag {
 ```
 
 ### Junit5TestAssertion.java
-カスタムアノテーションを作成する
+- カスタムアノテーションを作成する
 ```
 package devhiroba.junit5.test;
 
@@ -445,7 +445,7 @@ public @interface CustomAnnotationSlowTest {
 ```
 
 ### JUnit5TestRepeat.java
-テストを繰り返して実行する
+- テストを繰り返して実行する
 ```
 package devhiroba.junit5.test;
 
@@ -524,7 +524,7 @@ public class JUnit5TestRepeat {
 ```
 
 ### JUnit5TestInstance.java
-テストインスタンスを一つのみ作成する
+- テストインスタンスを一つのみ作成する
 ```
 package devhiroba.junit5.test;
 
@@ -579,7 +579,7 @@ public class JUnit5TestInstance {
 ```
 
 ### JUnit5TestMethodOrder.java
-テストの順番を決める
+- テストの順番を決める
 ```
 package devhiroba.junit5.test;
 
@@ -612,7 +612,7 @@ public class JUnit5TestMethodOrder {
 ```
 
 ### junit-platform.properties
-アノテーション定義をテスト全体に一括適用する
+- アノテーション定義をテスト全体に一括適用する
 ```
 # ここの定義はすべてのテストに一括適用される
 
