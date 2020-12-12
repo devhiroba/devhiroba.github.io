@@ -337,6 +337,224 @@ dependencies {
 ### プロジェクトの構成
 ![Test Image 3](/resource/image/dynamodb-local-dynamodbmapper-sample-seeddata-image.png)
 
+### DynamoDBUtil
+```
+package util;
+
+import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.AWSCredentialsProvider;
+import com.amazonaws.auth.AWSStaticCredentialsProvider;
+import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.client.builder.AwsClientBuilder;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig;
+import com.amazonaws.services.dynamodbv2.model.CreateTableRequest;
+import com.amazonaws.services.dynamodbv2.model.DeleteTableRequest;
+import com.amazonaws.services.dynamodbv2.model.ProvisionedThroughput;
+import com.amazonaws.services.dynamodbv2.util.TableUtils;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import models.UserModel;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class DynamoDBUtil {
+
+    /**
+     * DB接続情報はオンコディングしない
+     * application.yml 等を参照するようにすること
+     */
+    private final String region = "ap-northeast-1";
+    private final String endpointUrl = "http://localhost:8000";
+    private final String accessKey = "dummy";
+    private final String secretKey = "dummykey";
+
+    private AmazonDynamoDB amazonDynamoDB;
+    public DynamoDBMapper dynamoDBMapper;
+
+    public DynamoDBUtil() {
+        AWSCredentials awsCredentials = new BasicAWSCredentials(accessKey, secretKey);
+        AWSCredentialsProvider awsCredentialsProvider = new AWSStaticCredentialsProvider(awsCredentials);
+        AwsClientBuilder.EndpointConfiguration endpointConfiguration =
+                new AwsClientBuilder.EndpointConfiguration(endpointUrl, region);
+        amazonDynamoDB = AmazonDynamoDBClientBuilder.standard()
+                .withCredentials(awsCredentialsProvider)
+                .withEndpointConfiguration(endpointConfiguration).build();
+        dynamoDBMapper = new DynamoDBMapper(amazonDynamoDB, DynamoDBMapperConfig.DEFAULT);
+        assertNotNull(amazonDynamoDB);
+        assertNotNull(dynamoDBMapper);
+    }
+
+    /**
+     * テーブル作成
+     */
+    public void createTable() {
+        CreateTableRequest createTableRequest = dynamoDBMapper.generateCreateTableRequest(UserModel.class)
+                .withProvisionedThroughput(new ProvisionedThroughput(1L, 1L));
+        assertTrue(TableUtils.createTableIfNotExists(amazonDynamoDB, createTableRequest));
+    }
+
+    /**
+     * テーブル削除
+     */
+    public void deleteTable() {
+        DeleteTableRequest deleteTableRequest = dynamoDBMapper.generateDeleteTableRequest(UserModel.class);
+        assertTrue(TableUtils.deleteTableIfExists(amazonDynamoDB, deleteTableRequest));
+    }
+
+    /**
+     * シードデータをロードする。
+     * UserModelのみ利用可能
+     */
+    public void seedDataLoaderForUserModel(String seedFile) {
+        Gson gson = new Gson();
+        Type modelType = new TypeToken<ArrayList<UserModel>>(){}.getType();
+        List<UserModel> modelList = null;
+        try {
+            modelList = gson.fromJson(new FileReader(seedFile), modelType);
+        } catch(FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+        dynamoDBMapper.batchSave(modelList);
+    }
+
+    /**
+     * シードデータをロードする。
+     */
+    public <T> void seedDataLoaderForAllModel(String seedFile, Class<T> classType) {
+        Gson gson = new Gson();
+        Type collectionType = TypeToken.getParameterized(List.class, classType).getType();
+        List<T> modelList = null;
+        try {
+            modelList = gson.fromJson(new FileReader(seedFile), collectionType);
+        } catch(FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+        dynamoDBMapper.batchSave(modelList);
+    }
+
+    /**
+     * シードデータをロードする。
+     */
+    public <T> void seedDataLoaderForAllModelV2(String seedFile, Class<T[]> classes) {
+        Gson gson = new Gson();
+        T[] models = null;
+        try {
+            models = gson.fromJson(new FileReader(seedFile), classes);
+        } catch(FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+        dynamoDBMapper.batchSave(models);
+    }
+}
+```
+
+### DynamoDBLoadSeedDataTest
+```
+import models.UserModel;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import util.DynamoDBUtil;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+public class DynamoDBLoadSeedDataTest {
+
+    private DynamoDBUtil dynamoDBUtil;
+
+    public DynamoDBLoadSeedDataTest() {
+        this.dynamoDBUtil = new DynamoDBUtil();
+    }
+
+    /**
+     * テーブル作成
+     */
+    @BeforeEach
+    void beforeEach(){
+        dynamoDBUtil.createTable();
+    }
+
+    /**
+     * テーブル削除
+     */
+    @AfterEach
+    void afterEach() {
+        dynamoDBUtil.deleteTable();
+    }
+
+    /**
+     * シードデータを登録する
+     * UserModelのみ登録可能
+     */
+    @Test
+    void seedDataLoaderForUserModelTest() {
+        /**
+         * アイテム登録
+         */
+        dynamoDBUtil.seedDataLoaderForUserModel("src/test/resources/seed-data-usermodel.json");
+        /**
+         * アイテム取得
+         */
+        UserModel userModel = new UserModel();
+        userModel.setId("yama1010");
+        userModel.setGender("man");
+        UserModel userModel2 = new UserModel();
+        userModel2.setId("mori9910");
+        userModel2.setGender("man");
+        List<UserModel> userModelList = new ArrayList<>();
+        userModelList.add(userModel);
+        userModelList.add(userModel2);
+        Map<String, List<Object>> items = dynamoDBUtil.dynamoDBMapper.batchLoad(userModelList);
+        System.out.println(items.get("UserModel"));
+    }
+
+    /**
+     * シードデータを登録する
+     */
+    @Test
+    void seedDataLoaderForAllModelTest() {
+        dynamoDBUtil.<UserModel>seedDataLoaderForAllModel("src/test/resources/seed-data-v1.json", UserModel.class);
+    }
+
+    /**
+     * シードデータを登録する
+     */
+    @Test
+    void seedDataLoaderForAllModelV2Test() {
+        dynamoDBUtil.<UserModel>seedDataLoaderForAllModelV2("src/test/resources/seed-data-v2.json", UserModel[].class);
+    }
+}
+```
+
+### seed-data-usermodel.json
+```
+[
+  {
+    "id": "yama1010",
+    "gender": "man",
+    "name": "yamada",
+    "age": 10
+  },
+  {
+    "id": "mori9910",
+    "gender": "man",
+    "name": "mori",
+    "age": 20
+  }
+]
+```
 
 ### GitHub Repository
 [https://github.com/devhiroba/dynamodb-local-dynamodbmapper-sample.git](https://github.com/devhiroba/dynamodb-local-dynamodbmapper-sample.git)
