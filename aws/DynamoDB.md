@@ -317,5 +317,7 @@ public class DynamoDBMapperTest {
 }
 ```
 
+## テスト用シードデータを登録する方法
+
 ### GitHub Repository
 [https://github.com/devhiroba/dynamodb-local-dynamodbmapper-sample.git](https://github.com/devhiroba/dynamodb-local-dynamodbmapper-sample.git)
