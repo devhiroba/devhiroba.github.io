@@ -319,5 +319,21 @@ public class DynamoDBMapperTest {
 
 ## テスト用シードデータを登録する方法
 
+### build.gradle
+JSON から Object へ変換するため GSON を gradle に追加します。
+```
+dependencies {
+    
+    ・・・
+
+    // GSON
+    testImplementation('com.google.code.gson:gson:2.8.6')
+}
+```
+
+### プロジェクトの構成
+![Test Image 3](/resource/image/dynamodb-local-dynamodbmapper-sample-seeddata-image.png)
+
+
 ### GitHub Repository
 [https://github.com/devhiroba/dynamodb-local-dynamodbmapper-sample.git](https://github.com/devhiroba/dynamodb-local-dynamodbmapper-sample.git)
