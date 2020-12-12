@@ -317,7 +317,10 @@ public class DynamoDBMapperTest {
 }
 ```
 
-## テスト用シードデータを登録する方法
+## テスト用シードデータ（JSON）を登録する方法
+テストデータ登録用の共通部品を作成してデータを登録します。
+ポイントは GSON を使用して JSON データを Model（Entity） クラスに変換することです。
+変換した Model クラスを DynamoDBMapper を使用して登録します。
 
 ### build.gradle
 JSON から Object へ変換するため GSON を gradle に追加します。
