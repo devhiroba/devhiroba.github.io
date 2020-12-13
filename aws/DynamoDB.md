@@ -325,7 +325,7 @@ DynamoDBMapper を使用した CRUD 方法について理解しました。次�
 DynamoDB Local では DBUnit が利用できないため、JSON 形式のデータを DynamoDB Local に登録するメソッドを作成します。  
 
 ポイントは GSON を使用して JSON データを Model（Entity） クラスに変換することです。変換した Model クラスを DynamoDBMapper を使用して登録します。
-この時、ジェネリックメソッドで作成して複数の Entity に対応できるようにします。
+この時、メソッドはジェネリックメソッドで作成して特定の Entity に依存しないようにします。
 
 ![Test Image 3](/resource/image/dynamodb-local-seeddata-diagram-image.png)
 
