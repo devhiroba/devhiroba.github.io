@@ -327,7 +327,7 @@ DynamoDB Local では DBUnit が利用できないため、JSON 形式のデー�
 DynamoDB ではテーブルデータの全件削除ができないため、テスト（@Test）毎に毎回テーブルを作り直します。
 1. テーブル作成（@BeforeEach）
 2. シードデータ登録＆テスト（@Test）
-3. テーブル削除（@AfgerEach）
+3. テーブル削除（@AfterEach）
 
 ![Test Image 3](/resource/image/dynamodb-local-seeddata-diagram-image.png)
 
