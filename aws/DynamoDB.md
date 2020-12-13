@@ -318,9 +318,10 @@ public class DynamoDBMapperTest {
 ```
 
 ## テスト用シードデータ（JSON）を登録する方法
-テストデータ登録用の共通部品を作成してデータを登録します。  
-ポイントは GSON を使用して JSON データを Model（Entity） クラスに変換することです。  
-変換した Model クラスを DynamoDBMapper を使用して登録します。
+DynamoDBMapper を使用した CRUD 方法について理解しました。次はテストデータ登録用の共通部品を作成してデータを登録します。
+DynamoDB Local では DBUnit が利用できないため、JSON 形式のデータを DynamoDB Local に登録するメソッドを作成します。  
+
+ポイントは GSON を使用して JSON データを Model（Entity） クラスに変換することです。変換した Model クラスを DynamoDBMapper を使用して登録します。
 
 ![Test Image 3](/resource/image/dynamodb-local-seeddata-diagram-image.png)
 
