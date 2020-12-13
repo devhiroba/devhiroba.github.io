@@ -327,13 +327,13 @@ DynamoDB Local では DBUnit が利用できないため、JSON 形式のデー�
 ポイントは GSON を使用して JSON データを Model（Entity） クラスに変換することです。変換した Model クラスを DynamoDBMapper を使用して登録します。
 この時、ジェネリックメソッドで作成して複数の Entity に対応できるようにします。
 
+![Test Image 3](/resource/image/dynamodb-local-seeddata-diagram-image.png)
+
 また、想定しているテストパターンは下記の通りです。  
 DynamoDB ではテーブルデータの全件削除ができないため、テスト（@Test）毎に毎回テーブルを作り直します。
 1. テーブル作成（@BeforeEach）
 2. シードデータ登録＆テスト（@Test）
 3. テーブル削除（@AfterEach）
-
-![Test Image 3](/resource/image/dynamodb-local-seeddata-diagram-image.png)
 
 ### build.gradle
 JSON から Object へ変換するため GSON を gradle に追加します。
