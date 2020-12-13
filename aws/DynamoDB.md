@@ -321,6 +321,7 @@ public class DynamoDBMapperTest {
 テストデータ登録用の共通部品を作成してデータを登録します。  
 ポイントは GSON を使用して JSON データを Model（Entity） クラスに変換することです。  
 変換した Model クラスを DynamoDBMapper を使用して登録します。
+
 ![Test Image 3](/resource/image/dynamodb-local-seeddata-diagram-image.png)
 
 ### build.gradle
