@@ -8,14 +8,17 @@ AWS で提供するフルマネージド型の NoSQL データベースサービ
 
 ## DynamoDB ローカルを Java のユニットテストで使用する方法  
 DynamoDB ローカルとは？AWS DynamoDB がローカルの開発環境で使用できる Docker コンテナのことです。  
-開発環境 
-
+ 
+関連技術
 - Java  
 - Gradle  
 - IntelliJ  
 - JUnit5  
+- DynamoDB Local
 - DynamoDBMapper  
 - Docker-compose
+- Lombok
+- GSON（シードデータ登録用の共通部品作成時に使用）
 
 ### build.gradle
 JUnit5 と DynamoDBMapper を使用する為、build.gradle の 設定をします
