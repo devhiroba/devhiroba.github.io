@@ -9,7 +9,9 @@ Zabbixはオープンソース・ソフトウェアとして開発されてお�
 -- 公式サイトから引用
 
 ## Zabbixの構造
+![Image](/resource/image/zabbix-diagram.png)
 
 ## Zabbixの通信方法（Active・Passive）
+![Image](/resource/image/zabbix-active-passive-diagram.png)
 
 ## Zabbix構築
