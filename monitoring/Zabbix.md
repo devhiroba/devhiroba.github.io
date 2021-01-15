@@ -12,18 +12,20 @@ Zabbixはオープンソース・ソフトウェアとして開発されてお�
 
 ・Server  
 ・Agent  
+・Proxy  
 ・Frontend  
-・Proxy
 
 ### Server
 モニタリングを行う中核のプロセスです。  
 監視対象サーバーに設置された Agent とやり取りして監視対象サーバーの情報を処理します。
 
 ### Agent
+監視対象サーバーに設置されて、そのサーバーの稼働情報データを収集し、Zabbix Server に報告します。
 
+### Proxy
 
 ### Frontend
-### Proxy
+
 
 
 ## Zabbixの構造
