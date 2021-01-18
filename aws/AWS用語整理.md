@@ -60,8 +60,12 @@ Simple Storage Service
 コンテナストレージ
 ### Glacier
 ファイルストレージ
+
 ### EBS
-Elastic Block Store
+> Elastic Block Store  
+> Amazon EC2インスタンスに接続できるブロックレベルのストレージ  
+> 簡単に言うとハードディスクみたいなもの  
+
 
 ## Database
 ### DynamoDB
