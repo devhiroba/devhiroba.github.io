@@ -49,7 +49,10 @@ Elastic Beanstalk
 ### Auto Scaling
 -
 ### AMI
-Amazon Machine Images
+> Amazon Machine Images  
+> Amazon マシンイメージ (AMI) には、インスタンスの起動に必要な情報が用意されている  
+> インスタンスを起動するときは、AMI を指定する必要がある  
+> 同じ設定で複数のインスタンスが必要な場合は、1 つの AMI から複数のインスタンスが起動できる
 
 ## Storage
 ### S3
@@ -93,6 +96,7 @@ a
 
 ### AWS KMS
 AWS Key Management Service
+
 
 ### Amazon Pinpoint
 AWSによるカスタマーエンゲージメントプラットフォーム  
