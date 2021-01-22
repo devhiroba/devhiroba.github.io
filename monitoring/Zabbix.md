@@ -41,11 +41,11 @@ Zabbixはオープンソース・ソフトウェアとして開発されてお�
 ## Zabbix構築
 ・CentOS 7
 ・Zabbix 2.2
-・MySql
+・MySql 5.7.33
 
 ### 構築手順
 １．AWS EC2 インスタンス作成（CuntOS 7）  
-２．Zabbix インストール  
+２．Zabbix と DB インストール  
 ```
 #Root権限に変更
 sudo su -  
@@ -80,8 +80,53 @@ yum info mysql-community-server
 
 #DBインストール
 yum install mysql-community-server -y
+
+#DBバージョン確認
+mysql --version
+
+#DB起動
+systemctl start mysqld
+
+#OS起動時に自動的に起動するように設定
+systemctl enable mysqld
+
+#Mysqlの初期パスワードを確認する
+cat /var/log/mysqld.log | grep password
+
+#初期設定をする
+mysql_secure_installation
+
+#変更後のPWでログイン確認
+mysql -u root -p
+
+#Zabbix用DB作成
+create database zabbix character set utf8 collate utf8_bin;
+
+#Zabbix用DBアカウント作成（アカウント：zabbix、パスワード：zabbix%2jaDIQAEWpV）
+grant all privileges on zabbix.* to zabbix@localhost identified by 'zabbix%2jaDIQAEWpV';
+
+#データ作成
+mysql -uroot -p zabbix < /usr/share/doc/zabbix-server-mysql-2.2.23/create/schema.sql
+mysql -uroot -p zabbix < /usr/share/doc/zabbix-server-mysql-2.2.23/create/images.sql
+mysql -uroot -p zabbix < /usr/share/doc/zabbix-server-mysql-2.2.23/create/data.sql
+
+#Zabbixサーバーの設定ファイルにDBパスワードを設定する
+vi /etc/zabbix/zabbix_server.conf
+DBPassword=zabbix%2jaDIQAEWpV
+
+#Zabbixの設定ファイルにtimezone設定をする
+vi /etc/httpd/conf.d/zabbix.conf
+php_value date.timezone Asia/Tokyo
+
+#Zabbixサーバー起動
+systemctl start zabbix-server
+
+#Apach起動
+systemctl start httpd
 ```
 
+３．動作確認
+http://IPアドレス/zabbix/
 
 
 
