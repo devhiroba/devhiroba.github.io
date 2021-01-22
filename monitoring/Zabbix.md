@@ -137,8 +137,10 @@ systemctl start zabbix-server
 systemctl start httpd
 ```
 
-３．動作確認
-http://IPアドレス/zabbix/
+３．接続確認  
+http://IPアドレス/zabbix/  
+or
+http://AWSのDNS/zabbix/  
 
-
-
+ID：Admin  
+PW：zabbix  
