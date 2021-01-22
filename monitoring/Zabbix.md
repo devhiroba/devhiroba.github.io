@@ -39,3 +39,11 @@ Zabbixはオープンソース・ソフトウェアとして開発されてお�
 ![Image](/resource/image/zabbix-active-passive-diagram.png)
 
 ## Zabbix構築
+・CentOS 7
+・Zabbix 2.2
+・MySql
+
+### 構築手順
+１．AWS EC2 インスタンス作成（CuntOS 7）
+２．Zabbix インストール
+
