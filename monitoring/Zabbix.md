@@ -118,6 +118,18 @@ DBPassword=zabbix%2jaDIQAEWpV
 vi /etc/httpd/conf.d/zabbix.conf
 php_value date.timezone Asia/Tokyo
 
+#firewalldコマンドが実行できない場合のみ実行
+yum install firewalld
+systemctl unmask firewalld
+systemctl enable firewalld
+systemctl start firewalld
+
+#firewalldの設定
+firewall-cmd --add-port=10051/tcp --zone=public --permanent
+firewall-cmd --add-service=http --zone=public --permanent
+firewall-cmd --add-port=10050/tcp --zone=public --permanent
+firewall-cmd --reload
+
 #Zabbixサーバー起動
 systemctl start zabbix-server
 
