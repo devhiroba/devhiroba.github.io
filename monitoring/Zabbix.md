@@ -33,6 +33,7 @@ Zabbix 設定・監視を行う Web インターフェースです。
 
 ## Zabbixの通信方法（Active・Passive）
 ・デフォルト：Passive  
+  
 ![Image](/resource/image/zabbix-active-passive-diagram.png)
 
 ## Zabbix構築
@@ -42,7 +43,7 @@ Zabbix 設定・監視を行う Web インターフェースです。
 
 ### 構築手順
 １．AWS EC2 インスタンス作成（CuntOS 7）  
-２．Zabbix と DB インストール  
+２．Zabbix Server と DB インストール  
 ```
 #Root権限に変更
 sudo su -  
@@ -136,8 +137,10 @@ systemctl start httpd
 
 ３．接続確認  
 http://IPアドレス/zabbix/  
-or
+or  
 http://AWSのDNS/zabbix/  
 
 ID：Admin  
 PW：zabbix  
+
+４．Zabbix Agent インストール
