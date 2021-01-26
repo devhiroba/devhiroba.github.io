@@ -20,8 +20,7 @@ Zabbixはオープンソース・ソフトウェアとして開発されてお�
 監視対象サーバーに設置されて、そのサーバーの稼働情報データを収集し、Zabbix Server に報告します。
 
 ### Proxy
-モニタリング対象サーバーからデータを収集して Zabbix Server に転送するプロセスです。  
-Proxy は別途 DB が必要です。  
+Zabbix Server の代わりにモニタリング対象サーバーからデータを収集して Zabbix Server に転送するプロセスです。   
 Proxy の利用可否は任意です。  
 
 ### Frontend
