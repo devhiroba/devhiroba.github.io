@@ -161,7 +161,7 @@ firewall-cmd --reload
 systemctl is-enabled firewalld
 
 #iptables自動起動設定確認
-# systemctl is-enabled iptables
+systemctl is-enabled iptables
 
 #firewalld停止
 systemctl stop firewalld
@@ -174,11 +174,13 @@ systemctl disable firewalld
 
 #firewalld自動起動設定確認
 systemctl is-enabled firewalld
-
-#Zabbixサーバー起動
+```
+・Zabbixサーバー起動
+```
 systemctl start zabbix-server
-
-#Apach起動
+```
+・Apach起動
+```
 systemctl start httpd
 ```
 
@@ -187,6 +189,7 @@ http://IPアドレス/zabbix/
 or  
 http://AWSのDNS/zabbix/  
 
+・初期アカウント
 ID：Admin  
 PW：zabbix  
 
