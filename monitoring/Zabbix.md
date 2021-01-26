@@ -26,13 +26,11 @@ Proxy の利用可否は任意です。
 ### Frontend
 Zabbix 設定・監視を行う Web インターフェースです。
 
-
 ## Zabbixの構造
-![Image](/resource/image/zabbix-diagram.png)
-
-### Zabbix Server
-
-### Zabbix Agent
+・Proxy なし
+![Image](/resource/image/zabbix-diagram.png)  
+・Proxy あり
+![Image](/resource/image/zabbix-diagram2.png)  
 
 ## Zabbixの通信方法（Active・Passive）
 ・デフォルト：Passive  
