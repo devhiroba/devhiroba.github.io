@@ -189,7 +189,7 @@ http://IPアドレス/zabbix/
 or  
 http://AWSのDNS/zabbix/  
 
-・初期アカウント
+・初期アカウント  
 ID：Admin  
 PW：zabbix  
 
@@ -218,3 +218,13 @@ Hostname=centospassive
 systemctl enable zabbix-agent
 systemctl start zabbix-agent
 ```
+５．監視対象サーバー（zabbix agentを新ストールしたサーバー）を登録する。  
+・ホストグループを作成する。  
+設定＞ホストグループ＞ホストグループの作成  
+![Image](/resource/image/zabbix_web.png)
+・ホストを作成する。  
+設定＞ホスト＞ホストの作成  
+![Image](/resource/image/zabbix_web2.png)
+![Image](/resource/image/zabbix_web3.png)
+
+
