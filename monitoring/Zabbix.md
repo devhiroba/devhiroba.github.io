@@ -125,7 +125,7 @@ systemctl unmask firewalld
 systemctl enable firewalld
 systemctl start firewalld
 
-#firewalldの設定
+#firewalldの設定（AWSの場合はSGで管理するため下記のコマンドは不要）
 firewall-cmd --add-port=10051/tcp --zone=public --permanent
 firewall-cmd --add-service=http --zone=public --permanent
 firewall-cmd --add-port=10050/tcp --zone=public --permanent
