@@ -29,7 +29,7 @@ Zabbix 設定・監視を行う Web インターフェースです。
 ## Zabbixの構造
 ・Proxy なし
 ![Image](/resource/image/zabbix-diagram.png)  
-・Proxy あり
+・Proxy あり  
 ![Image](/resource/image/zabbix-diagram2.png)  
 
 ## Zabbixの通信方法（Active・Passive）
