@@ -110,6 +110,9 @@ mysql -uroot -p zabbix < /usr/share/doc/zabbix-server-mysql-2.2.23/create/data.s
 
 #Zabbixサーバーの設定ファイルにDBパスワードを設定する
 vi /etc/zabbix/zabbix_server.conf
+DBHost=localhost
+DBName=zabbix
+DBUser=zabbix
 DBPassword=zabbix%2jaDIQAEWpV
 
 #Zabbixの設定ファイルにtimezone設定をする
