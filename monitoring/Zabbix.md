@@ -193,7 +193,7 @@ http://AWSのDNS/zabbix/
 ID：Admin  
 PW：zabbix  
 
-４．Zabbix Agent インストール
+４．Zabbix Agent インストール  
 ・Root権限に変更
 ```
 sudo su -  
