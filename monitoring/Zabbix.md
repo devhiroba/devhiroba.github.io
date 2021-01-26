@@ -44,92 +44,136 @@ Zabbix 設定・監視を行う Web インターフェースです。
 ### 構築手順
 １．AWS EC2 インスタンス作成（CuntOS 7）  
 ２．Zabbix Server と DB インストール  
+
+・Root権限に変更
 ```
-#Root権限に変更
 sudo su -  
-
-#zabbix設置ファイルをダウンロード  
-#zabbix設置ファイル検索(https://repo.zabbix.com/zabbix/)
+```
+・zabbix設置ファイルをダウンロード  
+・zabbix設置ファイル検索(https://repo.zabbix.com/zabbix/)
+```
 rpm -ivh https://repo.zabbix.com/zabbix/2.2/rhel/7/x86_64/zabbix-release-2.2-1.el7.noarch.rpm
-
-#設置できるサービスを確認
+```
+・設置できるサービスを確認
+```
 yum search zabbix
-
-#ZabbixサーバのZabbixサーバプロセスをインストールする(mysql用)
+```
+・ZabbixサーバのZabbixサーバプロセスをインストールする(mysql用)
+```
 yum install zabbix-server-mysql -y
-
-#Zabbixを操作するためのWebインターフェースをインストールする(mysql用)
+```
+・Zabbixを操作するためのWebインターフェースをインストールする(mysql用)
+```
 yum install zabbix-web-mysql -y
-
-#Webインターフェースでグラフ表示時の日本語の文字化けを防ぐ為のフォントの設定
+```
+・Webインターフェースでグラフ表示時の日本語の文字化けを防ぐ為のフォントの設定
+```
 yum install zabbix-web-japanese -y
-
-#Zabbix Server自分も監視したい為、agent もインストールする
+```
+・Zabbix Server自分も監視したい為、agent もインストールする
+```
 yum install zabbix-agent -y
-
-#zabbix_agentからデータの取得をコマンドラインでできる
+```
+・zabbix_agentからデータの取得をコマンドラインでできる
+```
 yum install zabbix-get -y
-
-#DBサーバーのRPM取得
+```
+・DBサーバーのRPM取得
+```
 rpm -Uvh http://dev.mysql.com/get/mysql57-community-release-el7-7.noarch.rpm
-
-#確認
+```
+・確認
+```
 yum info mysql-community-server
-
-#DBインストール
+```
+・DBインストール
+```
 yum install mysql-community-server -y
-
-#DBバージョン確認
+```
+・DBバージョン確認
+```
 mysql --version
-
-#DB起動
+```
+・DB起動
+```
 systemctl start mysqld
-
-#OS起動時に自動的に起動するように設定
+```
+・OS起動時に自動的に起動するように設定
+```
 systemctl enable mysqld
-
-#Mysqlの初期パスワードを確認する
+```
+・Mysqlの初期パスワードを確認する
+```
 cat /var/log/mysqld.log | grep password
-
-#初期設定をする
+```
+・初期設定をする
+```
 mysql_secure_installation
-
-#変更後のPWでログイン確認
+```
+・変更後のPWでログイン確認
+```
 mysql -u root -p
-
-#Zabbix用DB作成
+```
+・Zabbix用DB作成
+```
 create database zabbix character set utf8 collate utf8_bin;
-
-#Zabbix用DBアカウント作成（アカウント：zabbix、パスワード：zabbix%2jaDIQAEWpV）
+```
+・Zabbix用DBアカウント作成（アカウント：zabbix、パスワード：zabbix%2jaDIQAEWpV）
+```
 grant all privileges on zabbix.* to zabbix@localhost identified by 'zabbix%2jaDIQAEWpV';
-
-#データ作成
+```
+・データ作成
+```
 mysql -uroot -p zabbix < /usr/share/doc/zabbix-server-mysql-2.2.23/create/schema.sql
 mysql -uroot -p zabbix < /usr/share/doc/zabbix-server-mysql-2.2.23/create/images.sql
 mysql -uroot -p zabbix < /usr/share/doc/zabbix-server-mysql-2.2.23/create/data.sql
-
-#Zabbixサーバーの設定ファイルにDBパスワードを設定する
+```
+・Zabbixサーバーの設定ファイルにDBパスワードを設定する
+```
 vi /etc/zabbix/zabbix_server.conf
 DBHost=localhost
 DBName=zabbix
 DBUser=zabbix
 DBPassword=zabbix%2jaDIQAEWpV
-
-#Zabbixの設定ファイルにtimezone設定をする
+```
+・Zabbixの設定ファイルにtimezone設定をする
+```
 vi /etc/httpd/conf.d/zabbix.conf
 php_value date.timezone Asia/Tokyo
-
-#firewalldコマンドが実行できない場合のみ実行
+```
+・firewalldコマンドが実行できない場合のみ実行（firewall設定をしない場合は下記のコマンドは不要）
+```
 yum install firewalld
 systemctl unmask firewalld
 systemctl enable firewalld
 systemctl start firewalld
-
-#firewalldの設定（AWSの場合はSGで管理するため下記のコマンドは不要）
+```
+・firewalldの設定（firewall設定をしない場合は下記のコマンドは不要）
+```
 firewall-cmd --add-port=10051/tcp --zone=public --permanent
 firewall-cmd --add-service=http --zone=public --permanent
 firewall-cmd --add-port=10050/tcp --zone=public --permanent
 firewall-cmd --reload
+```
+・firewallの停止（IP制限をAWSのSGに任せてfirewallは停止する場合）
+```
+#firewalld自動起動設定確認
+systemctl is-enabled firewalld
+
+#iptables自動起動設定確認
+# systemctl is-enabled iptables
+
+#firewalld停止
+systemctl stop firewalld
+
+#firewalld停止確認
+systemctl status firewalld
+
+#firewalld自動起動停止
+systemctl disable firewalld
+
+#firewalld自動起動設定確認
+systemctl is-enabled firewalld
 
 #Zabbixサーバー起動
 systemctl start zabbix-server
