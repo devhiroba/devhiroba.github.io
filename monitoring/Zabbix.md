@@ -194,3 +194,27 @@ ID：Admin
 PW：zabbix  
 
 ４．Zabbix Agent インストール
+・Root権限に変更
+```
+sudo su -  
+```
+・zabbix設置ファイルをダウンロード  
+・zabbix設置ファイル検索(https://repo.zabbix.com/zabbix/)
+```
+rpm -Uvh https://repo.zabbix.com/zabbix/2.2/rhel/7/x86_64/zabbix-release-2.2-1.el7.noarch.rpm
+```
+・zabbix agent設置
+```
+yum -y install zabbix zabbix-agent
+```
+・zabbix_agentd.conf編集(サーバーとの通信はPassive方式)
+```
+vi /etc/zabbix/zabbix_agentd.conf
+Server=111.222.333.444(Zabbix Server IP)
+Hostname=centospassive
+```
+・zabbix agentの起動
+```
+systemctl enable zabbix-agent
+systemctl start zabbix-agent
+```
