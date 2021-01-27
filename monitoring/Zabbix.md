@@ -193,6 +193,25 @@ http://AWSのDNS/zabbix/
 ID：Admin  
 PW：zabbix  
 
+※Zabbix Serverが起動できない場合はSELINUXを確認しよう！
+・SELINUXが実行中か確認
+```
+ sestatus
+```
+・SELINUXを一時的に無効化
+```
+setenforce 0
+```
+・SELINUXを永続的に無効化
+```
+vi /etc/selinux/config
+SELINUX=enforcing
+```
+・SELINUXの設定を反映させるためにはサーバー再起動が必要
+```
+reboot
+```
+
 ４．Zabbix Agent インストール  
 ・Root権限に変更
 ```
@@ -218,28 +237,6 @@ Hostname=centospassive
 systemctl enable zabbix-agent
 systemctl start zabbix-agent
 ```
-・SELINUXが実行中か確認
-```
- sestatus
-```
-・SELINUXを一時的に無効化
-```
-setenforce 0
-```
-・SELINUXを永続的に無効化
-```
-vi /etc/selinux/config
-SELINUX=enforcing
-```
-・SELINUXの設定を反映させるためにはサーバー再起動が必要
-```
-reboot
-```
-
-
-
-
-
 
 ５．監視対象サーバー（zabbix agentを新ストールしたサーバー）を登録する。  
 ・ホストグループを作成する。  
