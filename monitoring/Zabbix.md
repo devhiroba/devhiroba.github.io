@@ -193,7 +193,7 @@ http://AWSのDNS/zabbix/
 ID：Admin  
 PW：zabbix  
 
-※Zabbix Serverが起動できない場合はSELINUXを確認しよう！
+※Zabbix Serverが起動できない場合はSELINUXを確認しよう！  
 ・SELINUXが実行中か確認
 ```
  sestatus
@@ -205,7 +205,7 @@ setenforce 0
 ・SELINUXを永続的に無効化
 ```
 vi /etc/selinux/config
-SELINUX=enforcing
+SELINUX=disabled
 ```
 ・SELINUXの設定を反映させるためにはサーバー再起動が必要
 ```
