@@ -256,11 +256,13 @@ systemctl start zabbix-agent
 ### 監視対象サーバーの登録 
 ---
 ・ホストグループを作成する。  
+```
 設定＞ホストグループ＞ホストグループの作成  
+```
 ![Image](/resource/image/zabbix_web.png)
 ・ホストを作成する。  
+```
 設定＞ホスト＞ホストの作成  
+```
 ![Image](/resource/image/zabbix_web2.png)
 ![Image](/resource/image/zabbix_web3.png)
-
-
