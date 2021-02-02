@@ -41,6 +41,10 @@ Zabbix 設定・監視を行う Web インターフェースです。
 ・Zabbix 2.2  
 ・MySql 5.7.33  
 
+
+{:.bg-yellow-dark.text-white.p-2.box-shadow-large}
+Text can be **bold**{:.h1}, _italic_, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines (unless hovered over).
+
 ### 構築手順
 １．AWS EC2 インスタンス作成（CuntOS 7）  
 ２．Zabbix Server と DB インストール  
