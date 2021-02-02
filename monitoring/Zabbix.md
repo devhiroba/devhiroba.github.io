@@ -1,5 +1,6 @@
-{:.bg-blue.text-white.p-2.box-shadow-large}
+---
 # Zabbix
+---
 [https://www.zabbix.com/jp](https://www.zabbix.com/jp)
 
 {:.bg-green.text-white.p-2.box-shadow-large}
