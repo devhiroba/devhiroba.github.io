@@ -40,7 +40,7 @@ Zabbix 設定・監視を行う Web インターフェースです。
 
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## Zabbixの通信方法（Active・Passive）
-・デフォルト：Passive  
+デフォルトは Passive 方式です。  
   
 ![Image](/resource/image/zabbix-active-passive-diagram.png)
 
