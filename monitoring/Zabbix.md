@@ -1,6 +1,12 @@
-{:.bg-blue-light.text-white.p-2.box-shadow-large}
+{:.bg-blue.text-white.p-2.box-shadow-large}
 # Zabbix
 [https://www.zabbix.com/jp](https://www.zabbix.com/jp)
+
+{:.bg-green.text-white.p-2.box-shadow-large}
+
+{:.bg-green-light.text-white.p-2.box-shadow-large}
+
+{:.bg-gray-light.text-white.p-2.box-shadow-large}
 
 {:.bg-yellow-dark.text-white.p-5.mb-6}
 ## Zabbixとは（公式サイトから引用）
