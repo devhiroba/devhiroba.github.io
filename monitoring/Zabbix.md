@@ -1,3 +1,4 @@
+{:.bg-yellow-dark.text-white.p-5.mb-6}
 # Zabbix
 [https://www.zabbix.com/jp](https://www.zabbix.com/jp)
 
