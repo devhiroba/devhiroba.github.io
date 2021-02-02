@@ -47,8 +47,10 @@ Zabbix 設定・監視を行う Web インターフェースです。
 
 ### 構築手順
 1. AWS EC2 インスタンス作成（CuntOS 7）  
+---
+---
 2. Zabbix Server と DB インストール  
-
+---
 ・Root権限に変更
 ```
 sudo su -  
@@ -62,6 +64,7 @@ rpm -ivh https://repo.zabbix.com/zabbix/2.2/rhel/7/x86_64/zabbix-release-2.2-1.e
 ```
 yum search zabbix
 ```
+---
 ・ZabbixサーバのZabbixサーバプロセスをインストールする(mysql用)
 ```
 yum install zabbix-server-mysql -y
