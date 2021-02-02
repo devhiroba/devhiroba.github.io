@@ -1,12 +1,11 @@
----
+
 # Zabbix
----
 [https://www.zabbix.com/jp](https://www.zabbix.com/jp)
 
-{:.bg-green.text-white.p-2.box-shadow-large}
+{:.bg-gray.text-white.p-2.box-shadow-large}
 # Zabbix
 
-{:.bg-green-light.text-white.p-2.box-shadow-large}
+{:.bg-gray-dark.text-white.p-2.box-shadow-large}
 # Zabbix
 
 {:.bg-gray-light.text-white.p-2.box-shadow-large}
