@@ -47,6 +47,8 @@ Zabbix 設定・監視を行う Web インターフェースです。
 - Zabbix 2.2  
 - MySql 5.7.33  
 
+### Zabbix Server インストール
+---
 ・Root権限に変更
 ```
 sudo su -  
@@ -81,6 +83,9 @@ yum install zabbix-agent -y
 ```
 yum install zabbix-get -y
 ```
+
+### MySQL インストール
+---
 ・DBサーバーのRPM取得
 ```
 rpm -Uvh http://dev.mysql.com/get/mysql57-community-release-el7-7.noarch.rpm
@@ -131,6 +136,9 @@ mysql -uroot -p zabbix < /usr/share/doc/zabbix-server-mysql-2.2.23/create/schema
 mysql -uroot -p zabbix < /usr/share/doc/zabbix-server-mysql-2.2.23/create/images.sql
 mysql -uroot -p zabbix < /usr/share/doc/zabbix-server-mysql-2.2.23/create/data.sql
 ```
+
+### Zabbix 定義ファイルの修正
+---
 ・Zabbixサーバーの設定ファイルにDBパスワードを設定する
 ```
 vi /etc/zabbix/zabbix_server.conf
@@ -187,7 +195,8 @@ systemctl start zabbix-server
 systemctl start httpd
 ```
 
-3. 接続確認  
+### 接続確認  
+---
 http://IPアドレス/zabbix/  
 or  
 http://AWSのDNS/zabbix/  
