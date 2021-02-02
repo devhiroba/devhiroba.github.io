@@ -1,17 +1,8 @@
-
+{:.bg-gray-dark.text-white.p-5.mb-6}
 # Zabbix
 [https://www.zabbix.com/jp](https://www.zabbix.com/jp)
 
-{:.bg-gray.text-white.p-2.box-shadow-large}
-# Zabbix
-
-{:.bg-gray-dark.text-white.p-2.box-shadow-large}
-# Zabbix
-
-{:.bg-gray-light.text-white.p-2.box-shadow-large}
-# Zabbix
-
-{:.bg-shade-gradient.text-white.p-5.mb-6}
+{:.bg-gray-dark.text-white.p-5.mb-6}
 ## Zabbixとは（公式サイトから引用）
 
 ZabbixはITインフラストラクチャ・コンポーネントの可用性やパフォーマンスを監視するためのエンタープライス向けソフトウェアです。  
