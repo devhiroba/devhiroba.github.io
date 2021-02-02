@@ -1,4 +1,4 @@
-{:.bg-yellow-dark.text-white.p-5.mb-6}
+{:.bg-blue-light.text-white.p-2.box-shadow-large}
 # Zabbix
 [https://www.zabbix.com/jp](https://www.zabbix.com/jp)
 
