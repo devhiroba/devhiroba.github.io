@@ -31,8 +31,9 @@ Zabbix 設定・監視を行う Web インターフェースです。
 
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## Zabbixの構造
+### Proxy利用しない
 ![Image](/resource/image/zabbix-diagram.png)
-  
+### proxy利用
 ![Image](/resource/image/zabbix-diagram2.png)
 
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
