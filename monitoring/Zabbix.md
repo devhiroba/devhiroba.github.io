@@ -10,10 +10,10 @@ ZabbixはITインフラストラクチャ・コンポーネントの可用性や
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## Zabbixの構成要素
 
-・Server  
-・Agent  
-・Proxy  
-・Frontend  
+- Server  
+- Agent  
+- Proxy  
+- Frontend  
 
 ### Server
 モニタリングを行う中核のプロセスです。  
