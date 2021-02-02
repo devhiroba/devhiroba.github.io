@@ -40,15 +40,12 @@ Zabbix 設定・監視を行う Web インターフェースです。
 ![Image](/resource/image/zabbix-active-passive-diagram.png)
 
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
-## Zabbix構築
+## Zabbix Server 構築
+※ AWS EC2 インスタンス（CuntOS 7）は作成前提で Zabbix Server をインストールします。  
+
 - CentOS 7  
 - Zabbix 2.2  
 - MySql 5.7.33  
-
-### 構築手順
-1. AWS EC2 インスタンス作成（CuntOS 7）  
-
-2. Zabbix Server と DB インストール  
 
 ・Root権限に変更
 ```
@@ -218,6 +215,8 @@ SELINUX=disabled
 reboot
 ```
 
+{:.bg-gray-dark.text-white.p-2.box-shadow-large}
+## Zabbix Agent 設置
 4. Zabbix Agent インストール  
 ・Root権限に変更
 ```
