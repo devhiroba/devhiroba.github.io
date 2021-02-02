@@ -10,11 +10,6 @@ ZabbixはITインフラストラクチャ・コンポーネントの可用性や
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## Zabbixの構成要素
 
-- Server  
-- Agent  
-- Proxy  
-- Frontend  
-
 ### Server
 モニタリングを行う中核のプロセスです。  
 監視対象サーバーに設置された Agent とやり取りして監視対象サーバーの情報を処理します。
@@ -46,13 +41,13 @@ Zabbix 設定・監視を行う Web インターフェースです。
 
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## Zabbix構築
-・CentOS 7  
-・Zabbix 2.2  
-・MySql 5.7.33  
+- CentOS 7  
+- Zabbix 2.2  
+- MySql 5.7.33  
 
 ### 構築手順
-１．AWS EC2 インスタンス作成（CuntOS 7）  
-２．Zabbix Server と DB インストール  
+1. AWS EC2 インスタンス作成（CuntOS 7）  
+2. Zabbix Server と DB インストール  
 
 ・Root権限に変更
 ```
@@ -193,7 +188,7 @@ systemctl start zabbix-server
 systemctl start httpd
 ```
 
-３．接続確認  
+3. 接続確認  
 http://IPアドレス/zabbix/  
 or  
 http://AWSのDNS/zabbix/  
@@ -221,7 +216,7 @@ SELINUX=disabled
 reboot
 ```
 
-４．Zabbix Agent インストール  
+4. Zabbix Agent インストール  
 ・Root権限に変更
 ```
 sudo su -  
@@ -247,7 +242,7 @@ systemctl enable zabbix-agent
 systemctl start zabbix-agent
 ```
 
-５．監視対象サーバー（zabbix agentを新ストールしたサーバー）を登録する。  
+5. 監視対象サーバー（zabbix agentを新ストールしたサーバー）を登録する。  
 ・ホストグループを作成する。  
 設定＞ホストグループ＞ホストグループの作成  
 ![Image](/resource/image/zabbix_web.png)
