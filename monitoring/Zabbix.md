@@ -8,6 +8,7 @@
 ZabbixはITインフラストラクチャ・コンポーネントの可用性やパフォーマンスを監視するためのエンタープライス向けソフトウェアです。  
 Zabbixはオープンソース・ソフトウェアとして開発されており、無料でダウンロードいただくことが可能です。  
 
+{:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## Zabbixの構成要素
 
 ・Server  
@@ -29,16 +30,19 @@ Proxy の利用可否は任意です。
 ### Frontend
 Zabbix 設定・監視を行う Web インターフェースです。
 
+{:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## Zabbixの構造
 ![Image](/resource/image/zabbix-diagram.png)
   
 ![Image](/resource/image/zabbix-diagram2.png)
 
+{:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## Zabbixの通信方法（Active・Passive）
 ・デフォルト：Passive  
   
 ![Image](/resource/image/zabbix-active-passive-diagram.png)
 
+{:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## Zabbix構築
 ・CentOS 7  
 ・Zabbix 2.2  
