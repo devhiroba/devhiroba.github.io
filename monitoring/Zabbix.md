@@ -3,11 +3,11 @@
 [https://www.zabbix.com/jp](https://www.zabbix.com/jp)
 
 {:.bg-green.text-white.p-2.box-shadow-large}
-
+# Zabbix
 {:.bg-green-light.text-white.p-2.box-shadow-large}
-
+# Zabbix
 {:.bg-gray-light.text-white.p-2.box-shadow-large}
-
+# Zabbix
 {:.bg-yellow-dark.text-white.p-5.mb-6}
 ## Zabbixとは（公式サイトから引用）
 
