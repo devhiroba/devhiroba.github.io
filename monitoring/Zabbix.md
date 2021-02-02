@@ -1,7 +1,9 @@
 # Zabbix
 [https://www.zabbix.com/jp](https://www.zabbix.com/jp)
 
+{:.bg-yellow-dark.text-white.p-5.mb-6}
 ## Zabbixとは（公式サイトから引用）
+
 ZabbixはITインフラストラクチャ・コンポーネントの可用性やパフォーマンスを監視するためのエンタープライス向けソフトウェアです。  
 Zabbixはオープンソース・ソフトウェアとして開発されており、無料でダウンロードいただくことが可能です。  
 
