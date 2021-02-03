@@ -42,6 +42,7 @@ Zabbix 設定・監視を行う Web インターフェースです。
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## Zabbix Server 構築
 ※ AWS EC2 インスタンス（CuntOS 7）は作成前提で Zabbix Server をインストールします。  
+※ Zabbix Server は linux/unix システムでしか動かないです。
 
 - CentOS 7  
 - Zabbix 2.2  
