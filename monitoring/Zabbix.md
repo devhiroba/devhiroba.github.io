@@ -255,7 +255,7 @@ systemctl start zabbix-agent
 ```
 ・プロセスの確認
 ```
-ps -ef | grep zabbix-agent
+ps -ef | grep zabbix
 ```
 
 ### 監視対象サーバーの登録 
