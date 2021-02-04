@@ -253,6 +253,10 @@ Hostname=centospassive
 systemctl enable zabbix-agent
 systemctl start zabbix-agent
 ```
+・プロセスの確認
+```
+ps -ef | grep zabbix-agent
+```
 
 ### 監視対象サーバーの登録 
 ---
