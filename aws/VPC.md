@@ -77,4 +77,7 @@ IP + / + ネットマスク、例)192.168.0.0/32
 - 「Dynamic Host Configuration Protocol」IPv4アドレス、 サブネットマスク、デフォルトゲートウェイ、DNSサーバのアドレスなどの通信用の基本的な設定を自動的に行うためのプロトコルです。
 - 独自の DHCP 設定もできますが、基本的には VPC 作成時に生成されるものをそのまま利用します。 
 
+{:.bg-gray-dark.text-white.p-2.box-shadow-large}
+## VPC 概要図
+
 
