@@ -271,3 +271,6 @@ ps -ef | grep zabbix
 ```
 ![Image](/resource/image/zabbix_web2.png)
 ![Image](/resource/image/zabbix_web3.png)
+
+## JMX 監視の追加
+Zabbix Server がインストールされているサーバーに zabbix-java-gateway をインストールする
