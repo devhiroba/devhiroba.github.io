@@ -79,5 +79,4 @@ IP + / + ネットマスク、例)192.168.0.0/32
 
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## VPC 概要図
-
-
+[https://docs.aws.amazon.com/ja_jp/vpc/latest/userguide/VPC_Scenario2.html](https://docs.aws.amazon.com/ja_jp/vpc/latest/userguide/VPC_Scenario2.html)  
