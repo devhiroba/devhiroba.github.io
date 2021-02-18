@@ -64,7 +64,14 @@ resource "aws_vpc" "sampleVPC" {
 ```
 
 ### output
-- sdf
-- 
+- 下記の例だと変数名 cidr_block で resource の cidr_block 値を state ファイルい保存します。
+- output で定義した変数は remote 経由で利用できます。
 ```
+resource "aws_vpc" "sampleVPC" {
+  cidr_block = "10.0.0.0/16"
+}
+
+output "cidr_block" {
+  value = aws_vpc.default.cidr_block
+}
 ```
