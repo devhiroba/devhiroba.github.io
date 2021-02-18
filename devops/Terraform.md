@@ -21,6 +21,7 @@
 - 普通は provider.tf の名前で作成します。
 - provider の中には色んな Arguments があります。
 - AWS resource を利用するためのファイルをダウンロードする役割です。（例：SDKなど）  
+
 ```
 provider "aws" {
   region = "us-east-1"
@@ -65,7 +66,8 @@ resource "aws_vpc" "sampleVPC" {
 
 ### output
 - 下記の例だと変数名 cidr_block で resource の cidr_block 値を state ファイルい保存します。
-- output で定義した変数は remote 経由で利用できます。  
+- output で定義した変数は remote 経由で利用できます。
+  
 ```
 resource "aws_vpc" "sampleVPC" {
   cidr_block = "10.0.0.0/16"
