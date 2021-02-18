@@ -92,9 +92,16 @@ module "vpc" {
 ```
 
 ### remote
-- sdf
-- sdfsd
+- リモートの.tfstate ファイルの参照が可能です。
+- key に指定した .tfstate ファイルに output で定義されている変数が取得できます。
 
 ```
-
+data "terraform_remote_sate" "vpc" {
+  backend = "remote"
+  config = {
+    bucket = "terraform-s3-bucket"
+    region = "us-east-1"
+    key = "terraform/vpc/terraform.tfstate" # このファイルに output で定義されている変数を取得します。
+  }
+}
 ```
