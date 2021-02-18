@@ -30,7 +30,7 @@ provider "aws" {
 
 ### resource
 - 決まったルールはありませんが、main.tf、vpc.tf など分かりやすい名前を使いましょう。
-- resource の中には色んな Arguments があります
+- resource の中には色んな Arguments があります。
 - resource "リソース種類" "リソース名"
 - リソース種類：aws_lb、aws_amiなどTerraformで予め定義されています。
 - リソース名：任意の名前を設定します。
@@ -39,4 +39,32 @@ provider "aws" {
 resource "aws_vpc" "sampleVPC" {
   cidr_block = "10.0.0.0/16"
 }
+```
+
+### state
+- terraform.tfstate 名前は固定です。
+- terraform で作成したコードを実行すると作成されるファイルです。
+- terraform コードを実行して作成されたリソース(インフラ)の結果です。
+- 現在のインフラの状態ではありません。
+- state ファイル状態と実際のインフラ状態を一致させるのが大事です。
+- state ファイルは remote repository である backend にも保存できます。
+```
+{
+  "version": 2,
+  "terraform_version": "0.10.10",
+  "serial": 1,
+  "lineage": "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX",
+  "outputs": {},
+  "resources": [
+    {...},
+    {...},
+    {...}
+  ]
+}
+```
+
+### output
+- sdf
+- 
+```
 ```
