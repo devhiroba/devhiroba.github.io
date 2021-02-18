@@ -35,6 +35,7 @@ provider "aws" {
 - resource "リソース種類" "リソース名"
 - リソース種類：aws_lb、aws_amiなどTerraformで予め定義されています。
 - リソース名：任意の名前を設定します。  
+
 ```
 # VPC 作成
 resource "aws_vpc" "sampleVPC" {
@@ -49,6 +50,7 @@ resource "aws_vpc" "sampleVPC" {
 - 現在のインフラの状態ではありません。
 - state ファイル状態と実際のインフラ状態を一致させるのが大事です。
 - state ファイルは remote repository である backend にも保存できます。  
+
 ```
 {
   "version": 2,
