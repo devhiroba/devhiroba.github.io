@@ -79,3 +79,14 @@ output "cidr_block" {
   value = aws_vpc.default.cidr_block
 }
 ```
+
+### module
+- source のパスに実際のリソース(.tf)ファイルが存在します。
+- 同じコードを再利用する時に有用です。
+
+```
+module "vpc" {
+  source = "../_modules/vpc" # /vpcの直下にリソース.tfファイルが存在します。
+  cidr_block = "10.0.0.0/16" # 上記のリソース.tfファイルで利用するパラメータを定義します。
+}
+```
