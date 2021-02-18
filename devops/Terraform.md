@@ -20,7 +20,7 @@
 ### provider
 - 普通は provider.tf の名前で作成します。
 - provider の中には色んな Arguments があります。
-- AWS resource を利用するためのファイルをダウンロードする役割です。（例：SDKなど）
+- AWS resource を利用するためのファイルをダウンロードする役割です。（例：SDKなど）  
 ```
 provider "aws" {
   region = "us-east-1"
@@ -33,7 +33,7 @@ provider "aws" {
 - resource の中には色んな Arguments があります。
 - resource "リソース種類" "リソース名"
 - リソース種類：aws_lb、aws_amiなどTerraformで予め定義されています。
-- リソース名：任意の名前を設定します。
+- リソース名：任意の名前を設定します。  
 ```
 # VPC 作成
 resource "aws_vpc" "sampleVPC" {
@@ -47,7 +47,7 @@ resource "aws_vpc" "sampleVPC" {
 - terraform コードを実行して作成されたリソース(インフラ)の結果です。
 - 現在のインフラの状態ではありません。
 - state ファイル状態と実際のインフラ状態を一致させるのが大事です。
-- state ファイルは remote repository である backend にも保存できます。
+- state ファイルは remote repository である backend にも保存できます。  
 ```
 {
   "version": 2,
@@ -65,7 +65,7 @@ resource "aws_vpc" "sampleVPC" {
 
 ### output
 - 下記の例だと変数名 cidr_block で resource の cidr_block 値を state ファイルい保存します。
-- output で定義した変数は remote 経由で利用できます。
+- output で定義した変数は remote 経由で利用できます。  
 ```
 resource "aws_vpc" "sampleVPC" {
   cidr_block = "10.0.0.0/16"
