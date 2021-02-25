@@ -123,3 +123,18 @@ data "terraform_remote_sate" "vpc" {
 
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## AWS Configure 設定
+
+{:.bg-gray-dark.text-white.p-2.box-shadow-large}
+## VPC 作成
+
+{:.bg-gray-dark.text-white.p-2.box-shadow-large}
+## Subnet 作成
+
+{:.bg-gray-dark.text-white.p-2.box-shadow-large}
+## IGW 作成
+
+{:.bg-gray-dark.text-white.p-2.box-shadow-large}
+## nat ゲートウェイ作成
+
+{:.bg-gray-dark.text-white.p-2.box-shadow-large}
+## ルートテーブル作成
