@@ -15,7 +15,7 @@
 
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## Terraform の基本構成要素
-
+![Image](/resource/image/terraform1.svg)
 
 ### provider
 - 普通は provider.tf の名前で作成します。
