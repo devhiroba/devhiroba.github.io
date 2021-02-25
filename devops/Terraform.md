@@ -15,7 +15,7 @@
 
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## Terraform の基本構成要素
-![Image](/resource/image/terraform1.svg)
+![Image](/resource/image/terraform1.svg)  
 ---
 
 ### provider
