@@ -109,8 +109,8 @@ data "terraform_remote_sate" "vpc" {
 
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## Terraform 基本コマンド 
-![Image](/resource/image/terraform2.svg)  
----
+![Image](/resource/image/terraform2.svg)
+
 ![Image](/resource/image/terraform3.svg)  
 
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
