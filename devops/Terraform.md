@@ -105,3 +105,12 @@ data "terraform_remote_sate" "vpc" {
   }
 }
 ```
+
+{:.bg-gray-dark.text-white.p-2.box-shadow-large}
+## AWS CLI インストール 
+
+{:.bg-gray-dark.text-white.p-2.box-shadow-large}
+## TERRAFORM インストール
+
+{:.bg-gray-dark.text-white.p-2.box-shadow-large}
+## AWS Configure 設定
