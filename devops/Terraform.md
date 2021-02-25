@@ -22,7 +22,7 @@
 - 普通は provider.tf の名前で作成します。
 - provider の中には色んな Arguments があります。
 - AWS resource を利用するためのファイルをダウンロードする役割です。（例：SDKなど）  
-
+---
 ```
 provider "aws" {
   region = "us-east-1"
