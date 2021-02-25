@@ -15,14 +15,15 @@
 
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## Terraform の基本構成要素
-![Image](/resource/image/terraform1.svg)  
+![Image](/resource/image/terraform1.svg)
+
 ---
 
 ### provider
 - 普通は provider.tf の名前で作成します。
 - provider の中には色んな Arguments があります。
 - AWS resource を利用するためのファイルをダウンロードする役割です。（例：SDKなど）  
----
+
 ```
 provider "aws" {
   region = "us-east-1"
@@ -111,6 +112,7 @@ data "terraform_remote_sate" "vpc" {
 ## Terraform 基本コマンド 
 ![Image](/resource/image/terraform2.svg)
 
+---
 ![Image](/resource/image/terraform3.svg)  
 
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
