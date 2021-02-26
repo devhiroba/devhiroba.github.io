@@ -117,6 +117,11 @@ data "terraform_remote_sate" "vpc" {
 
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## AWS CLI インストール 
+- インストール方法：[https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/install-cliv2-windows.html](https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/install-cliv2-windows.html)
+- インストールファイル：[https://awscli.amazonaws.com/AWSCLIV2.msi](https://awscli.amazonaws.com/AWSCLIV2.msi)
+- インストールすると Windows の場合 C:\Program Files\Amazon\AWSCLIV2 に設置される
+- Version 確認  
+![Image](/resource/image/terraform_command_version.png)
 
 {:.bg-gray-dark.text-white.p-2.box-shadow-large}
 ## TERRAFORM インストール
